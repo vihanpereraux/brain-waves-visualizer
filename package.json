@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "name": "brain-waves-viz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
