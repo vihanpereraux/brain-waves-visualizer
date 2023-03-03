@@ -5,8 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brain Waves</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Helvetica, Arial, sans-serif;
+            overflow: hidden; /* disable scrolling / rubberband effect on mobile */
+        }
+
+        canvas {
+            display: block;
+            position: absolute;
+            outline:0;
+            z-index: 0 !important;
+        }
+
+        * {
+            /* disable on touch highlights of html elements, especially on mobile! */
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div id="slab-wrapper">
+        <div>
+            <div class="slab slab-01">
+                <div class="filler"></div>
+            </div>
+            <div class="slab slab-02">
+                <div class="filler"></div>
+            </div>
+            <div class="slab slab-03">
+                <div class="filler"></div>
+            </div>
+            <div class="slab slab-04">
+                <div class="filler"></div>
+            </div>
+            <div class="slab slab-05">
+                <div class="filler"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="horizontal-line line-01">
+                <div class="filler"></div>
+            </div>
+            <div class="horizontal-line line-02">
+                <div class="filler"></div>
+            </div>
+            <div class="horizontal-line line-03">
+                <div class="filler"></div>
+            </div>
+            <div class="horizontal-line line-04">
+                <div class="filler"></div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+
+    <script type="text/javascript" src="assets/js/patch.js" async></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
