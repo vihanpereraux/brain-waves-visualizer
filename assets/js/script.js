@@ -1,58 +1,6 @@
 import {Curtains, Plane, Vec2} from '../src/index.mjs';
 
 
-// hover animation
-const slabContentOne = document.getElementById('slab-content-01');
-const slabContentTwo = document.getElementById('slab-content-02');
-const paka = document.getElementById('paka');
-
-const pageWrap = document.getElementById('page-wrap');
-const pageWrapTwo = document.getElementById('page-wrap-2');
-
-
-slabContentOne.addEventListener('mouseenter', function(){
-    paka.src = 'assets/vid/Background.mp4';
-});
-slabContentTwo.addEventListener('mouseenter', function(){
-    paka.src = 'assets/vid/Background2.mp4';
-});
-
-document.body.addEventListener('mousemove', function(event){
-    // pageWrap.style.opacity = 1
-    // pageWrap.style.width = "25%";
-    pageWrap.style.left = (event.clientX + 5000)/100 + "%";
-    pageWrap.style.top = (event.clientY + 4500)/100 + "%";
-    // if(event.clientX > 600){
-    //     pageWrap.style.transform = 'rotate(5deg)';
-    // }
-    // else{
-    //     pageWrap.style.transform = 'rotate(-5deg)';
-    // }
-    
-});
-// slabContentOne.addEventListener('mouseout', function(){
-//     pageWrap.style.width = "0%";
-// });
-
-// slabContentTwo.addEventListener('mousemove', function(event){
-//     pageWrap.style.opacity = 1
-//     pageWrap.style.width = "25%";
-//     pageWrap.style.zIndex = 1001;
-//     pageWrap.style.left = (event.clientX + 200)/20 + "%";
-//     pageWrap.style.top = (event.clientY + 150)/10 + "%";
-//     if(event.clientX > 600){
-//         pageWrap.style.transform = 'rotate(5deg)';
-//     }
-//     else{
-//         pageWrap.style.transform = 'rotate(-5deg)';
-//     }
-    
-// });
-// slabContentTwo.addEventListener('mouseout', function(){
-//     pageWrap.style.width = "0%";
-// });
-
-
 window.addEventListener("load", () => {
     // track the mouse positions to send it to the shaders
     const mousePosition = new Vec2();
@@ -123,7 +71,7 @@ window.addEventListener("load", () => {
             float distanceFromMouse = distance(uMousePosition, vec2(vertexPosition.x, vertexPosition.y));
 
             // calculate our wave effect
-            float waveSinusoid = cos(5.0 * (distanceFromMouse - (uTime / 75.0)));
+            float waveSinusoid = cos(10.0 * (distanceFromMouse - (uTime / 75.0)));
 
             // attenuate the effect based on mouse distance
             float distanceStrength = (0.8 / (distanceFromMouse + 0.4));

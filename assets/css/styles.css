@@ -120,28 +120,15 @@ body{
     position: absolute;
     z-index: 5;
     background-color: none;
-    /* border-radius: 50px; */
-    width: 60%;
+    border-radius: 40px;
+    width: 50%;
     opacity: 1;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     height: auto;
     overflow: hidden;
-    /* transition: all 0.001s ease; */
 }
-/* #page-wrap-2 {
-    display: block;
-    position: absolute;
-    z-index: 5;
-    width: 25%;
-    opacity: 1;
-    left: 45%;
-    top: 40%;
-    height: auto;
-    overflow: hidden;
-    transition: all 0.003s ease;
-} */
 #canvas {
     height: 60vh;
     width: 90vw;
@@ -191,6 +178,5 @@ body{
 
 
 .slab-01:hover #page-wrap{
-    /* opacity: 0.2; */
     display: block !important;
 }
