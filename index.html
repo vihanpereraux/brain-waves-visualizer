@@ -22,6 +22,8 @@
             display: block;
             position: absolute;
             outline:0;
+            width: 100vw !important;
+            height: 100vh !important;
             z-index: 0 !important;
         }
 
@@ -34,26 +36,88 @@
             -ms-user-select: none;
             user-select: none;
         }
-
     </style>
 </head>
 <body>
     <div id="slab-wrapper">
         <div>
-            <div class="slab slab-01">
+            <div class="slab slab-01" id="slab-content-01">
                 <div class="filler"></div>
+                <h1>story &nbsp ✷ &nbsp 
+                    <span id="small-text">brainwaves</span> 
+                    &nbsp ✷ &nbsp why so important 
+                    &nbsp ✷ story
+                </h1>
             </div>
-            <div class="slab slab-02">
+
+            <div class="slab slab-02" id="slab-content-02">
                 <div class="filler"></div>
+                <h1>generative art &nbsp ✷ &nbsp 
+                    <span id="small-text">explore art</span> 
+                    &nbsp ✷ &nbsp mixing with p5.js 
+                    &nbsp ✷ story
+                </h1>
+
+                <!-- <div id="page-wrap">
+                    <div id="canvas"></div>
+                    <div class="curtain-wrapper">
+                        <div class="curtain">
+                            <video  
+                                id="paka"
+                                autoplay 
+                                muted 
+                                class="w-100" 
+                    
+                                crossorigin="" 
+                                data-sampler="simplePlaneVideoTexture">
+                            </video>
+                        </div>
+                    </div>
+                </div> -->
             </div>
+
             <div class="slab slab-03">
                 <div class="filler"></div>
+                <h1>Contributions &nbsp ✷ &nbsp 
+                    <span id="small-text">contributions</span> 
+                    &nbsp ✷ &nbsp mixing with p5.js 
+                    &nbsp ✷ story
+                </h1>
             </div>
+
             <div class="slab slab-04">
                 <div class="filler"></div>
+                <h1>technologies &nbsp ✷ &nbsp 
+                    <span id="small-text">mixing with p5.js</span> 
+                    &nbsp ✷ &nbsp mixing with p5.js 
+                    &nbsp ✷ story
+                </h1>
             </div>
+
             <div class="slab slab-05">
                 <div class="filler"></div>
+                <h1>inquiries  &nbsp ✷ &nbsp 
+                    <span id="small-text">mixing with p5.js</span> 
+                    &nbsp ✷ &nbsp contact me 
+                    &nbsp ✷ &nbsp FaQ &nbsp ✷
+                </h1>
+            </div>
+        </div>
+
+        <div id="page-wrap">
+            <div id="canvas"></div>
+            <div class="curtain-wrapper">
+                <div class="curtain">
+                    <video  
+                        id="paka"
+                        autoplay 
+                        muted 
+                        class="w-100" 
+                        src=""
+                        crossorigin="" 
+                        data-sampler="simplePlaneVideoTexture">
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -73,9 +137,9 @@
         </div>
     </div>
 
-    <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
+    <canvas id="glcanvas"></canvas>
 
     <script type="text/javascript" src="assets/js/patch.js" async></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
 </body>
 </html>
