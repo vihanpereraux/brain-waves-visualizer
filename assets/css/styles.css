@@ -18,6 +18,194 @@ body{
     overflow-y: hidden !important;
     overflow-x: hidden !important;
 }
+
+#glcanvas {
+    display: block;
+    position: absolute;
+    outline:0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 0 !important;
+}
+
+* {
+    /* disable on touch highlights of html elements, especially on mobile! */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#top-text-wrapper .top-text{
+    padding-top: 10px;   
+    position: absolute;
+    color: white;
+    z-index: 1;
+    font-family: 'CosiTimes-Bold';
+    line-height: 1.6;
+    font-size: 1.1vw;
+}
+#top-text-wrapper #left-text{
+    left: 3%;   
+    text-align: left;
+}
+#top-text-wrapper #middle-text{
+    transform: translateX(-50%);
+    left: 50%;
+    text-align: center;   
+}
+#top-text-wrapper #right-text{
+    right: 3%;
+    text-align: right;   
+}
+
+#information-points-wrapper .point{
+    width: 50px;
+    height: 50px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+#information-points-wrapper #point-one{
+    left: 28%;
+    top: 20%;
+}
+#information-points-wrapper #point-two{
+    right: 23%;
+    top: 12%;
+}
+#information-points-wrapper #point-three{
+    transform: translate(-50%, -50%);
+    left: 52%;
+    top: 47%;
+}
+
+#next-button-wrapper #next-button{
+    width: 8vw;
+    height: 8vw;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 46%;
+    right: 3%;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5vw;
+    color: white;
+}
+#next-button:hover{
+    background: white;
+    color: black;
+}
+
+
+#info-pannel{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    transform: translateY(-50%);
+    top: 45%;
+    left: 3%;
+}
+#info-pannel .outer-box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: none;
+    position: relative !important;
+    background: none;
+}
+#info-pannel .line-wrapper{
+    width: 250px;
+    height: 3px;
+    background: none;
+}
+#info-pannel .line{
+    width: 10px;
+    height: 3px;
+    background: white;
+    transition: all 0.15s linear;
+    border-radius: 15px;
+}
+#info-pannel .text{
+    position: absolute;
+    z-index: 2;
+    /* transform: translateY(-50%); */
+    margin-top: -0.6vw;
+    /* top: -25%; */
+    left: 20%;
+    /* right: 0; */
+    opacity: 0;
+    color: white;
+    font-family: 'CosiTimes-Bold';
+    font-size: 13px;
+    transition: all 0.15 linear;
+}
+#info-pannel .line-wrapper:hover .line{
+    transition: all 1s linear;
+}
+#info-pannel .line-wrapper:hover .text{
+    /* color: aqua; */
+    transition: all 1s linear;
+}
+
+
+.main-title{
+    background: none;
+    color: white;
+    position: absolute;
+    bottom: -8%;
+    z-index: 1;
+    font-family: 'CosiTimes-Bold';
+    font-size: 8vw;
+}
+#main-title-wrapper #left-text{
+    left: 3%;
+}
+#main-title-wrapper #arrow{
+    width: 24vw;
+    height: 7vw;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 2.5vw;
+    transform: translateX(-50%);
+    left: 48%;
+    border-radius: 50px;
+    border: 1px solid #CCFF00;
+    backdrop-filter: blur(15px);
+}
+#arrow #content{
+    color: #CCFF00;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 30%;
+    font-size: 1.5vw;
+    width: 100%;
+    text-align: center;
+    font-family: 'CosiTimes-Bold';
+}
+#main-title-wrapper #right-text{
+    right: 3%;
+    bottom: -10%;
+}
+
+
 #slab-wrapper{
     position: absolute;
     left: 0;
