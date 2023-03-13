@@ -1,17 +1,27 @@
-let image;
-let cnvs;
+let img;
+let newCanvas;
 
 function preload(){
-  image = loadImage('./assets/img/image.jpg');
+  img = loadImage("assets/img/image.jpg");
 }
 
 function setup() {
-  cnvs = createCanvas(image.width, image.height); 
-  let canvasX = (windowWidth - image.width)/2;
-  let canvasY = (windowHeight - image.height)/2;
-  cnvs.position(canvasX, canvasY);
-}
+  background(100);
+  
+  newCanvas = createCanvas(img.width, img.height);
+  let canvasX = (windowWidth - img.width)/2;
+  let canvasY = (windowHeight - img.height)/2;
+  newCanvas.position(canvasX, canvasY);
 
-function draw() {
-  background(200);
+  let c = img.get(0, 0);
+
+  let rows;
+  let cols;
+  for (rows = 1; rows < img.height; rows++) {
+    for (cols = 1; cols < img.width; cols++){
+        let c = img.get(cols, rows);
+        stroke(c[0], c[1], c[2]);
+        point(cols, rows);
+    }
+  }
 }
