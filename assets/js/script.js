@@ -20,7 +20,7 @@ document.addEventListener('CABLES.jsLoaded', function (event) {
         "glCanvasResizeToWindow": true,
         "onPatchLoaded": patchInitialized,
         "onFinishedLoading": patchFinishedLoading,
-        "canvas":{"alpha":true,"premultipliedAlpha":true} // make canvas transparent
+        "canvas":{"alpha":true,"premultipliedAlpha":true} //make canvas transparent
     });
 });
 
@@ -28,7 +28,6 @@ document.addEventListener('CABLES.jsLoaded', function (event) {
 // landing page stylings
 const lineWrappers = document.getElementsByClassName('outer-box');
 const lines = document.getElementsByClassName('line');
-const texts = document.getElementsByClassName('text');
 
 console.log(lineWrappers);
 for (let index = 0; index < lineWrappers.length; index++) {
@@ -54,7 +53,7 @@ function indexControllers(index, arr, event){
                 break;
         
             default:
-                lines[index - 1].style.width = '20px';
+                lines[index - 1].style.width = '15px';
                 lines[index].style.width = '35px';
                 texts[index].style.opacity = 1;
                 lines[index + 1].style.width = '20px';
@@ -82,4 +81,28 @@ function indexControllers(index, arr, event){
         }
     }
 }
+
+
+// information points stylings
+const pointOne = document.getElementById('point-one');
+const pointTwo = document.getElementById('point-two');
+const pointThree = document.getElementById('point-three');
+const popUp = document.getElementById('pop-up');
+const blurShade = document.getElementById('blur-shade');
+
+pointOne.addEventListener('mouseover', function(){
+    pointTwo.style.opacity = 0;
+    pointThree.style.opacity = 0;
+    blurShade.style.display = 'block';
+    blurShade.classList.add('blur-shade-animation');
+    popUp.style.display = 'block';
+    popUp.classList.add('popup-animation');
+});
+pointOne.addEventListener('mouseout', function(){
+    pointTwo.style.opacity = 1;
+    pointThree.style.opacity = 1;
+    popUp.classList.remove('popup-animation');
+    popUp.style.display = "none";
+    blurShade.style.display = 'none';
+});
 
